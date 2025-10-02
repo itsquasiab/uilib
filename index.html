@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>itsquasi's ui library</title>
+
+  <link rel="icon" type="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body>
+
+  <header class="py-1">
+    <div class="glass-backdrop"></div>
+    <div class="glass-edge"></div>
+    <nav class="max-w-7xl mx-auto flex justify-between">
+      <a href="index.html" class="text-xl">itsquasi</a>
+      <div class="flex gap-1">
+        <a href="#" class="text-lg">Link</a>
+        <a href="#" class="text-lg">Link</a>
+        <a href="#" class="text-lg">Link</a>
+        <a id="darkModeToggle" class="text-lg">Dark mode!</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="max-w-7xl mx-auto">
+
+    <h1 class="text-5xl lg:text-7xl xl:text-9xl"><span class="font-black">itsquasi</span>'s ui library</h1>
+    <p class="lg:text-xl">UI showcase using itsquasi's own CSS and Tailwind CSS</p>
+
+    <div class="my-container p-1 lg:p-1.5 grid gap-0.5">
+      <h1 class="text-xl lg:text-2xl xl:text-3xl font-semibold">Components</h1>
+
+      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Header</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <h1 class="text-xl lg:text-2xl xl:text-3xl font-semibold">Header example</h1>
+          <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Subheader example</h1>
+        </div>
+      </div>
+
+      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Paragraph</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Lorem ipsum</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis tincidunt porttitor. Cras dictum
+            ultricies rutrum. Suspendisse convallis viverra lacinia. Fusce arcu ex, fringilla a elementum rhoncus,
+            semper ut felis. Vestibulum vulputate pellentesque lectus, ultricies interdum arcu egestas vitae. Sed
+            viverra eros sed justo bibendum convallis. Proin pharetra nulla vel sem ultricies ultrices. Praesent non
+            gravida tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Nam ut blandit dui, sed fringilla lectus. Cras hendrerit dolor at ipsum blandit tristique.</p>
+          <p>Sed molestie justo quis velit ultricies efficitur. Praesent non ligula nunc. Mauris sit amet accumsan
+            augue. Cras sed nunc sed massa fringilla lobortis. In lacus lacus, ullamcorper vitae nunc in, laoreet
+            efficitur sem. Praesent non nulla ligula. Nunc ultricies lacus vel sodales fermentum. Praesent sit amet
+            lectus a dui hendrerit facilisis quis sit amet lectus. Nunc ut lorem eu mi tempor vehicula. Aenean quis eros
+            quis tellus elementum pulvinar.</p>
+          <p>Donec viverra, enim eget tempor ullamcorper, arcu nulla auctor purus, rhoncus aliquet est diam nec ante.
+            Integer ut massa a turpis luctus faucibus. Nulla non ligula lectus. In interdum convallis tristique.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis id erat
+            ac dolor interdum egestas. Duis ac arcu dictum, feugiat justo in, rutrum lorem.</p>
+        </div>
+      </div>
+
+      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Link</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <a href="#">Test link</a>
+        </div>
+      </div>
+
+      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Button</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <button>Test button</button>
+        </div>
+      </div>
+
+      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Input</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <label>Search:</label><br>
+          <input class="px-1 py-0.25" type="text" placeholder="Search" />
+        </div>
+        <div class="preview-container p-0.5 md:p-1">
+          <label>Email:</label><br>
+          <input class="px-1 py-0.25" type="email" placeholder="Enter email" /><br>
+          <label>Password:</label><br>
+          <input class="px-1 py-0.25" type="password" placeholder="Enter password" />
+        </div>
+        <div class="preview-container p-0.5 md:p-1">
+          <input type="radio" value="Option 1">
+          <input type="radio" value="Option 2">
+          <input type="radio" value="Option 3">
+        </div>
+        <div class="preview-container p-0.5 md:p-1">
+          <input type="checkbox" value="Option 1">
+          <input type="checkbox" value="Option 2">
+          <input type="checkbox" value="Option 3">
+        </div>
+      </div>
+
+      <p>Even more to come!</p>
+
+    </div>
+
+  </div>
+
+  <footer class="p-1 md:p-1.5 mt-1.5">
+    <div class="max-w-7xl mx-auto flex justify-between">
+      <div>
+        <p class="text-xl font-semibold">itsquasi's ui library.</p>
+        <p>version alpha 0.1</p>
+        <p>made by itsquasi.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

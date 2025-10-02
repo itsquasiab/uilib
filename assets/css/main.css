@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Light Mode */
+:root {
+    color-scheme: light;
+    --accent: #3399FF;
+    --accent-secondary: hsl(230, 56%, 80%);
+
+    --text: hsl(0, 0%, 5%);
+    --text-disabled: hsl(0, 0%, 50%);
+
+    --bg-dark: #B3DCFF;
+    --bg: #E5F3FF;
+    --bg-light: #FAFDFF;
+    --nav: rgb(179, 220, 255, 0.65);
+    --border: #99C2E6;
+
+    --blur: 0.5rem;
+    --blur-edge: 0.25rem;
+}
+
+/* Dark Mode */
+[data-color-scheme="dark"] {
+    color-scheme: dark;
+
+    --accent-secondary: hsl(230, 56%, 20%);
+
+    --text: hsl(0, 0%, 95%);
+
+    --bg-dark: #0D1722;
+    --bg: #15222E;
+    --bg-light: #223344;
+    --nav: rgb(10, 18, 26, 0.65);
+    --border: #060B10;
+}
+
+body {
+    font-family: 'Space Grotesk';
+    background-color: var(--bg);
+    transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.glass-backdrop {
+    position: absolute;
+    inset: 0;
+    -webkit-backdrop-filter: blur(var(--blur)) brightness(105%);
+    backdrop-filter: blur(var(--blur)) brightness(105%);
+    background: linear-gradient(to bottom, var(--bg), transparent 50%);
+    pointer-events: none;
+
+    height: 200%;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0% 50%,
+            transparent 50% 100%);
+    mask-image: linear-gradient(to bottom,
+            black 0% 50%,
+            transparent 50% 100%);
+}
+
+.glass-edge {
+    position: absolute;
+    height: 2px;
+    -webkit-backdrop-filter: blur(var(--blur-edge)) brightness(95%);
+    backdrop-filter: blur(var(--blur-edge)) brightness(95%);
+    transform: translateY(100%);
+    pointer-events: none;
+
+    height: 100%;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0,
+            black 2px,
+            transparent 2px);
+    mask-image: linear-gradient(to bottom,
+            black 0,
+            black 2px,
+            transparent 2px);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+nav a {
+    color: var(--text);
+    border: none;
+    position: relative;
+    transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: var(--text);
+    border: none;
+    transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.my-container {
+    background-color: var(--bg-light);
+    border-radius: 2rem;
+}
+
+.my-preview {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+}
+
+.my-preview .preview-container {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+}
+
+a:after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+}
+
+button {
+    background-color: var(--bg-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 4rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.9);
+    /*box-shadow: 0 0 0 2px var(--accent);*/
+}
+
+input {
+    border: 1px solid var(--border);
+    border-radius: 4rem;
+}
+
+footer {
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--text);
+}

@@ -1,0 +1,7 @@
+/* npm install tailwindcss @tailwindcss/cli */
+/* npx @tailwindcss/cli -i ./assets/css/import_tailwind.css -o ./assets/css/tailwind.css --watch */
+@import "tailwindcss";
+
+@theme {
+    --spacing: 1rem;
+}
