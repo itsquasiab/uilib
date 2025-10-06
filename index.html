@@ -17,12 +17,12 @@
     <div class="glass-backdrop"></div>
     <div class="glass-edge"></div>
     <nav class="max-w-7xl mx-auto flex justify-between">
-      <a href="index.html" class="text-xl">itsquasi</a>
+      <a href="index.html" class="md:text-xl">itsquasi</a>
       <div class="flex gap-1">
-        <a href="#" class="text-lg">Link</a>
-        <a href="#" class="text-lg">Link</a>
-        <a href="#" class="text-lg">Link</a>
-        <a id="darkModeToggle" class="text-lg">Dark mode!</a>
+        <a href="#" class="md:text-lg">Link</a>
+        <a href="#" class="md:text-lg">Link</a>
+        <a href="#" class="md:text-lg">Link</a>
+        <a id="darkModeToggle" class="md:text-lg">Dark mode!</a>
       </div>
     </nav>
   </header>
@@ -97,14 +97,18 @@
           <input class="px-1 py-0.25" type="password" placeholder="Enter password" />
         </div>
         <div class="preview-container p-0.5 md:p-1">
-          <input type="radio" value="Option 1">
-          <input type="radio" value="Option 2">
-          <input type="radio" value="Option 3">
+          <label class="custom-radio">
+            <input type="radio" name="option" />
+            <span></span>
+            Option A
+          </label>
         </div>
         <div class="preview-container p-0.5 md:p-1">
-          <input type="checkbox" value="Option 1">
-          <input type="checkbox" value="Option 2">
-          <input type="checkbox" value="Option 3">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span></span>
+            Remember me
+          </label>
         </div>
       </div>
 
