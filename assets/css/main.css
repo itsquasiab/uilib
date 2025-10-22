@@ -1,5 +1,9 @@
+/* Import typography */
+/* Font currently in use: Space Grotesk (my favourite)*/
+/* Will use Inter font for other projects */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 /* Light Mode */
 :root {
@@ -36,7 +40,7 @@
 }
 
 body {
-    font-family: 'Space Grotesk';
+    font-family: 'Space Grotesk', 'Inter';
     background-color: var(--bg);
     transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
@@ -102,6 +106,13 @@ nav a:hover {
 .my-container {
     background-color: var(--bg-light);
     border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.my-card {
+    background-color: var(--bg-light);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .my-preview {
