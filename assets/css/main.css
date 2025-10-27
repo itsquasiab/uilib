@@ -18,7 +18,7 @@
     --bg-d: hsl(200, 100%, 90%);
     --bg: hsl(200, 100%, 96%);
     --bg-l: hsl(200, 100%, 98%);
-    --brd: hsl(200, 60%, 60%);
+    --brd: hsl(200, 60%, 64%);
 
     --nav: hsla(200, 100%, 84%, 0.65);
     --nav2: hsla(200, 100%, 84%);
@@ -38,10 +38,10 @@
     --txt: hsl(0, 0%, 95%); /*f2f2f2*/
     --txt-d: hsl(0, 0%, 50%);
 
-    --bg-d: hsl(240, 40%, 6%);
-    --bg: hsl(240, 40%, 8%);
-    --bg-l: hsl(240, 40%, 12%);
-    --brd: hsl(200, 0%, 0%);
+    --bg-d: hsl(240, 50%, 18%);
+    --bg: hsl(240, 40%, 10%);
+    --bg-l: hsl(240, 40%, 14%);
+    --brd: hsl(240, 60%, 32%);
 
     --nav: hsla(240, 40%, 50%, 0.65);
     --nav2: hsla(240, 40%, 50%);
@@ -64,7 +64,7 @@ body {
 .my-card {
     background-color: var(--bg-l);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .my-preview {
