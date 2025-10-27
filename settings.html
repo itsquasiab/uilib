@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>itsquasi's ui library</title>
+
+  <link rel="icon" type="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar-glass"></div>
+    <div class="navbar-glass-edge"></div>
+    <nav class="mx-1 xl:mx-4 flex justify-between">
+      <a href="index.html" class="text-xl">itsquasi</a>
+      <div class="flex gap-0.5">
+        <a href="#" class="text-lg">Link</a>
+        <a href="#" class="dropdown text-lg">Dropdown</a>
+        <a href="#" class="text-lg">Sign in</a>
+        <a href="#" class="btn text-lg">Sign up</a>
+        <a href="settings.html" class="md:text-lg icon-btn center">
+          <img class="settings-icon" alt="Settings">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-1 py-1.5">
+
+    <h1 class="text-xl lg:text-3xl xl:text-5xl font-semibold">Settings</h1>
+    <p class="lg:text-xl">Useful stuffs.</p>
+
+    <div class="my-container p-1 lg:p-1.5 grid gap-0.5">
+
+        <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Appearance</h1>
+
+        <div class="grid grid-cols-2 gap-1">
+            <button id="light-btn">Light mode</button>
+            <button id="dark-btn">Dark mode</button>
+            <!--<button id="system-btn">Use system settings</button>-->
+        </div>
+
+    </div>
+
+  </div>
+
+  <footer class="p-1 md:p-1.5">
+    <div class="max-w-7xl mx-auto flex justify-between">
+      <div>
+        <p class="text-xl font-semibold">itsquasi's ui library.</p>
+        <p>made by itsquasi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

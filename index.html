@@ -13,34 +13,36 @@
 
 <body>
 
-  <header class="py-1">
-    <div class="glass-backdrop"></div>
-    <div class="glass-edge"></div>
-    <nav class="max-w-7xl mx-auto flex justify-between">
-      <a href="index.html" class="md:text-xl">itsquasi</a>
-      <div class="flex gap-1">
-        <a href="#" class="md:text-lg">Link</a>
-        <a href="#" class="md:text-lg">Link</a>
-        <a href="#" class="md:text-lg">Link</a>
-        <a id="darkModeToggle" class="md:text-lg"><span class="material-symbols-rounded">contrast</span></a>
+  <header>
+    <div class="navbar-glass"></div>
+    <div class="navbar-glass-edge"></div>
+    <nav class="mx-1 xl:mx-4 flex justify-between">
+      <a href="index.html" class="text-xl">itsquasi</a>
+      <div class="flex gap-0.5">
+        <a href="#" class="text-lg">Link</a>
+        <a href="#" class="dropdown text-lg">Dropdown</a>
+        <a href="#" class="text-lg">Sign in</a>
+        <a href="#" class="btn text-lg">Sign up</a>
+        <a href="settings.html" class="md:text-lg icon-btn center">
+          <img class="settings-icon" alt="Settings">
+        </a>
       </div>
     </nav>
   </header>
 
-  <div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto px-1 py-1.5">
 
     <h1 class="text-5xl lg:text-7xl xl:text-9xl"><span class="font-black">itsquasi</span>'s ui library</h1>
     <p class="lg:text-xl">UI showcase using itsquasi's own CSS and Tailwind CSS</p>
 
     <div class="my-container p-1 lg:p-1.5 grid gap-0.5">
-      <h1 class="text-xl lg:text-2xl xl:text-3xl font-semibold">Components</h1>
 
       <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Header</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
-          <h1 class="text-xl lg:text-2xl xl:text-3xl font-semibold">Header example</h1>
-          <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Subheader example</h1>
+          <h1 class="text-xl lg:text-3xl xl:text-5xl font-semibold">Title example</h1>
+          <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Header example</h1>
         </div>
       </div>
 
@@ -71,7 +73,9 @@
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
-          <a href="#">Test link</a>
+          <a>Test link</a>
+          <br><br>
+          <a class="btn">Button link</a>
         </div>
       </div>
 
@@ -88,13 +92,13 @@
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
           <label>Search:</label><br>
-          <input class="px-1 py-0.25" type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" />
         </div>
         <div class="preview-container p-0.5 md:p-1">
           <label>Email:</label><br>
-          <input class="px-1 py-0.25" type="email" placeholder="Enter email" /><br>
+          <input type="email" placeholder="Enter email" /><br>
           <label>Password:</label><br>
-          <input class="px-1 py-0.25" type="password" placeholder="Enter password" />
+          <input type="password" placeholder="Enter password" />
         </div>
         <div class="preview-container p-0.5 md:p-1">
           <label class="custom-radio">
@@ -127,21 +131,56 @@
         </div>
       </div>
 
+      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Table</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+            <tr>
+              <td>Anna</td>
+              <td>23</td>
+              <td>Berlin</td>
+            </tr>
+            <tr>
+              <td>Ben</td>
+              <td>29</td>
+              <td>London</td>
+            </tr>
+            <tr>
+              <td>Carla</td>
+              <td>34</td>
+              <td>Paris</td>
+            </tr>
+            <tr>
+              <td>David</td>
+              <td>41</td>
+              <td>Rome</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
       <p>Even more to come!</p>
 
     </div>
 
   </div>
 
-  <footer class="p-1 md:p-1.5 mt-1.5">
+  <footer class="p-1 md:p-1.5">
     <div class="max-w-7xl mx-auto flex justify-between">
       <div>
         <p class="text-xl font-semibold">itsquasi's ui library.</p>
-        <p>version alpha 0.1</p>
         <p>made by itsquasi.</p>
       </div>
     </div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 
 </body>
 

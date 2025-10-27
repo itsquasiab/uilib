@@ -1,0 +1,46 @@
+:root {
+    --blur: .5rem;
+    --blur-e: .25rem;
+}
+
+.navbar-glass {
+    position: absolute;
+    inset: 0;
+    -webkit-backdrop-filter: blur(var(--blur)) brightness(105%);
+    backdrop-filter: blur(var(--blur)) brightness(105%);
+    background: linear-gradient(to bottom, var(--bg), transparent 50%);
+    pointer-events: none;
+
+    height: 200%;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0% 50%,
+            transparent 50% 100%);
+    mask-image: linear-gradient(to bottom,
+            black 0% 50%,
+            transparent 50% 100%);
+}
+
+.navbar-glass-edge {
+    position: absolute;
+    height: 2px;
+    -webkit-backdrop-filter: blur(var(--blur-e)) brightness(95%);
+    backdrop-filter: blur(var(--blur-e)) brightness(95%);
+    transform: translateY(100%);
+    pointer-events: none;
+
+    height: 100%;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0,
+            black 2px,
+            transparent 2px);
+    mask-image: linear-gradient(to bottom,
+            black 0,
+            black 2px,
+            transparent 2px);
+}
+
+.frosted-glass {
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+}
