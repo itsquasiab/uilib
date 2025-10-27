@@ -26,7 +26,8 @@ if (saved) {
   updateActive("system");
 }
 
-// Button handlers
-document.getElementById("light-btn").onclick = () => setTheme("light");
-document.getElementById("dark-btn").onclick = () => setTheme("dark");
-document.getElementById("system-btn").onclick = () => setTheme("system");
+console.log(
+  document.getElementById("light-btn"),
+  document.getElementById("dark-btn"),
+  document.getElementById("system-btn")
+);
