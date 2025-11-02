@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-@import url(effect.css);
 @import url(table.css);
 @import url(navbar.css);
+
+:root {
+    --blur: .5rem;
+    --blur-e: .25rem;
+}
 
 /* Light Mode */
 :root[data-theme="light"] {
     color-scheme: light;
 
-    --acc: hsl(200, 100%, 72%);
-    --acc2: hsl(200, 100%, 64%);
-    --acc3: hsl(200, 100%, 50%);
+    --acc: hsl(210, 100%, 80%);
+    --acc2: hsl(210, 100%, 70%);
+    --acc3: hsl(210, 100%, 50%);
 
-    --txt: hsl(0, 0%, 5%); /*0d0d0d*/
+    --txt: hsl(0, 0%, 0%);
     --txt-d: hsl(0, 0%, 50%);
 
-    --bg-d: hsl(200, 100%, 90%);
-    --bg: hsl(200, 100%, 96%);
-    --bg-l: hsl(200, 100%, 98%);
-    --brd: hsl(200, 60%, 64%);
+    --bg-d: hsl(210, 100%, 92%);
+    --bg: hsl(210, 100%, 96%);
+    --bg-l: hsl(210, 100%, 100%);
+    --brd: hsl(210, 60%, 64%);
 
-    --nav: hsla(200, 100%, 84%, 0.65);
-    --nav2: hsla(200, 100%, 84%);
+    --nav: hsla(210, 100%, 84%, 0.65);
+    --nav2: hsla(210, 100%, 84%);
 }
 :root[data-theme="light"] .settings-icon {
     content: url("../icons/settings_light.svg");
@@ -35,12 +39,12 @@
     --acc2: hsl(240, 70%, 58%);
     --acc3: hsl(240, 70%, 72%);
 
-    --txt: hsl(0, 0%, 95%); /*f2f2f2*/
+    --txt: hsl(0, 0%, 100%);
     --txt-d: hsl(0, 0%, 50%);
 
-    --bg-d: hsl(240, 50%, 18%);
-    --bg: hsl(240, 40%, 10%);
-    --bg-l: hsl(240, 40%, 14%);
+    --bg-d: hsl(240, 30%, 18%);
+    --bg: hsl(240, 30%, 10%);
+    --bg-l: hsl(240, 30%, 14%);
     --brd: hsl(240, 60%, 32%);
 
     --nav: hsla(240, 40%, 50%, 0.65);
@@ -55,16 +59,21 @@ body {
     background-color: var(--bg);
 }
 
+.glass {
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+}
+
 .my-container {
     background-color: var(--bg-l);
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .my-card {
     background-color: var(--bg-l);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .my-preview {
@@ -108,6 +117,7 @@ a.btn {
 
 button:hover,
 a.btn:hover {
+    font-weight: normal;
     background-color: var(--acc2);
     transform: scale(1.05);
 }
@@ -126,5 +136,4 @@ input {
 
 footer {
     background-color: var(--bg-d);
-    border-top: 1px solid var(--brd);
 }

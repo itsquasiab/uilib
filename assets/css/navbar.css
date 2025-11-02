@@ -2,7 +2,44 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 0.9rem 0;
+    padding: 1rem 0;
+}
+
+.navbar-glass {
+    position: absolute;
+    inset: 0;
+    -webkit-backdrop-filter: blur(var(--blur)) brightness(100%);
+    backdrop-filter: blur(var(--blur)) brightness(100%);
+    background: linear-gradient(to bottom, var(--bg), transparent 50%);
+    pointer-events: none;
+
+    height: 200%;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0% 50%,
+            transparent 50% 100%);
+    mask-image: linear-gradient(to bottom,
+            black 0% 50%,
+            transparent 50% 100%);
+}
+
+.navbar-glass-edge {
+    position: absolute;
+    height: 4px;
+    -webkit-backdrop-filter: blur(var(--blur-e)) brightness(100%);
+    backdrop-filter: blur(var(--blur-e)) brightness(100%);
+    transform: translateY(100%);
+    pointer-events: none;
+
+    height: 100%;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0,
+            black 2px,
+            transparent 2px);
+    mask-image: linear-gradient(to bottom,
+            black 0,
+            black 2px,
+            transparent 2px);
 }
 
 nav a,
@@ -13,7 +50,7 @@ nav button {
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
         background-color 0.5s cubic-bezier(0.23, 1, 0.32, 1),
         font-weight 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    padding: 0.1rem 1rem;
+    padding: 0.25rem 1rem;
     border-radius: 50rem;
     box-shadow: none;
 }
@@ -29,23 +66,19 @@ nav button.btn {
     background-color: var(--acc);
     color: var(--txt);
     position: relative;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-        background-color 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-        font-weight 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    padding: 0.1rem 1rem;
-    border-radius: 50rem;
-    box-shadow: none;
+    padding: 0.25rem 1rem;
 }
 
 nav a.btn:hover,
 nav button.btn:hover {
+    font-weight: bold;
     background-color: var(--acc2);
     transform: scale(1.1);
 }
 
 nav a.icon-btn,
 nav button.icon-btn {
-    padding: 0.1rem calc(0.1rem + 2px);
+    padding: 0.25rem calc(0.25rem + 2px);
 }
 
 .center {
@@ -57,7 +90,7 @@ nav button.icon-btn {
 }
 
 .dropdown {
-    padding: 0.1rem 1rem;
+    padding: 0.25rem 1rem;
     position: relative;
 }
 
