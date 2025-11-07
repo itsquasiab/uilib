@@ -1,32 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-@import url(table.css);
 @import url(navbar.css);
+@import url(table.css);
+@import url(checkbox_radio.css);
 
 :root {
     --blur: .5rem;
     --blur-e: .25rem;
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --glass: hsla(0, 0%, 100%, 10%);
+    --glass-border: hsla(0, 0%, 100%, 20%);
 }
 
 /* Light Mode */
 :root[data-theme="light"] {
     color-scheme: light;
+    --background: hsl(220, 100%, 98%);
+    --foreground: hsl(240, 50%, 24%);
+    --card: hsl(0, 0%, 100%);
+    --primary: hsl(210, 100%, 50%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --secondary: hsl(0, 0%, 100%);
+    --secondary-foreground: hsl(240, 50%, 24%);
+    --muted: hsl(220, 100%, 92%);
+    --muted-foreground: hsl(210, 100%, 50%);
+    --accent: hsl(210, 100%, 40%);
+    --destructive: hsl(0 80% 60%);
+    --destructive-foreground: hsl(0, 0%, 100%);
+    --border: hsl(220, 100%, 86%);
+    --input: hsl(0, 0%, 100%);
+    --ring: hsl(220 90% 64%);
 
-    --acc: hsl(210, 100%, 80%);
-    --acc2: hsl(210, 100%, 70%);
-    --acc3: hsl(210, 100%, 50%);
-
-    --txt: hsl(0, 0%, 0%);
-    --txt-d: hsl(0, 0%, 50%);
-
-    --bg-d: hsl(210, 100%, 92%);
-    --bg: hsl(210, 100%, 96%);
-    --bg-l: hsl(210, 100%, 100%);
-    --brd: hsl(210, 60%, 64%);
-
-    --nav: hsla(210, 100%, 84%, 0.65);
-    --nav2: hsla(210, 100%, 84%);
+    --gradient: linear-gradient(hsl(220, 100%, 98%) 0%, hsl(220, 100%, 86%) 100%);
 }
+
 :root[data-theme="light"] .settings-icon {
     content: url("../icons/settings_light.svg");
 }
@@ -34,106 +43,155 @@
 /* Dark Mode */
 :root[data-theme="dark"] {
     color-scheme: dark;
+    --background: hsl(240, 50%, 12%);
+    --foreground: hsl(220, 100%, 94%);
+    --card: hsl(240, 50%, 14%);
+    --primary: hsl(210, 100%, 50%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --secondary: hsl(240, 50%, 18%);
+    --secondary-foreground: hsl(220, 100%, 94%);
+    --muted: hsl(240, 40%, 18%);
+    --muted-foreground: hsl(210, 100%, 50%);
+    --accent: hsl(210, 100%, 60%);
+    --destructive: hsl(0 80% 60%);
+    --destructive-foreground: hsl(0, 0%, 100%);
+    --border: hsl(240, 30%, 24%);
+    --input: hsl(240, 50%, 18%);
+    --ring: hsl(220 90% 64%);
 
-    --acc: hsl(240, 70%, 50%);
-    --acc2: hsl(240, 70%, 58%);
-    --acc3: hsl(240, 70%, 72%);
-
-    --txt: hsl(0, 0%, 100%);
-    --txt-d: hsl(0, 0%, 50%);
-
-    --bg-d: hsl(240, 30%, 18%);
-    --bg: hsl(240, 30%, 10%);
-    --bg-l: hsl(240, 30%, 14%);
-    --brd: hsl(240, 60%, 32%);
-
-    --nav: hsla(240, 40%, 50%, 0.65);
-    --nav2: hsla(240, 40%, 50%);
+    --gradient: linear-gradient(hsl(240, 50%, 12%) 0%, hsl(240, 30%, 24%) 100%);
 }
+
 :root[data-theme="dark"] .settings-icon {
     content: url("../icons/settings_dark.svg");
 }
 
 body {
     font-family: 'Space Grotesk';
-    background-color: var(--bg);
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.gradient {
+    background-image: var(--gradient);
 }
 
 .glass {
+    background-color: var(--glass);
+    border: 1px solid var(--glass-border);
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
+    box-shadow: var(--box-shadow);
+}
+
+.signin {
+    min-height: calc(100vh - 68px);
 }
 
 .my-container {
-    background-color: var(--bg-l);
+    background-color: var(--background);
+    border: 1px solid var(--border);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: var(--box-shadow);
 }
 
 .my-card {
-    background-color: var(--bg-l);
+    background-color: var(--card);
+    border: 1px solid var(--border);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: var(--box-shadow);
 }
 
 .my-preview {
-    background-color: var(--bg-d);
+    background-color: var(--background);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: var(--box-shadow);
 }
 
 .my-preview .preview-container {
-    background-color: var(--bg-l);
+    background-color: var(--card);
     border-radius: 0.75rem;
 }
 
 a {
-    color: var(--acc3);
+    color: var(--accent);
     text-decoration: none;
     display: inline-block;
-    margin: 0;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-        font-weight 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform var(--transition),
+        color var(--transition), filter var(--transition);
+}
+
+.button {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: color var(--transition), filter var(--transition), transform var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 a:hover {
-    font-weight: bold;
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+.button:hover {
+    filter: brightness(1.2);
     transform: scale(1.05);
 }
 
-a:active {
-    transform: scale(0.9);
+a:active,
+.button:active {
+    transform: scale(0.95);
 }
 
-button,
-a.btn {
-    background-color: var(--acc);
-    color: var(--txt);
+button {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     padding: 0.5rem 1rem;
-    border-radius: 4rem;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 0.5rem;
+    transition: color var(--transition), filter var(--transition), transform var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
-button:hover,
-a.btn:hover {
-    font-weight: normal;
-    background-color: var(--acc2);
+.secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    border: 1px solid var(--border);
+}
+
+.destructive {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+}
+
+button:hover {
+    filter: brightness(1.2);
     transform: scale(1.05);
 }
 
-button:active,
-a.btn:active {
-    transform: scale(0.9);
+button:active {
+    transform: scale(0.95);
 }
 
-input {
-    border: 1px solid var(--acc);
-    border-radius: 4rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 0.25rem 1rem;
+input,
+select {
+    background-color: var(--input);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 0.25rem 0.75rem;
+    outline: none;
+    transition: border var(--transition), box-shadow var(--transition);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--ring);
+    box-shadow: 0 0 1px 1px var(--ring);
 }
 
 footer {
-    background-color: var(--bg-d);
+    background-color: var(--secondary);
+    border-top: 1px solid var(--border);
 }

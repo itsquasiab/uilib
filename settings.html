@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>itsquasi's ui library</title>
+  <title>settings</title>
 
   <link rel="icon" type="icon" href="assets/images/icon.png">
   <link rel="stylesheet" href="assets/css/main.css">
@@ -19,10 +19,17 @@
     <nav class="mx-1 xl:mx-4 flex justify-between">
       <a href="index.html" class="text-xl">itsquasi</a>
       <div class="flex gap-0.5">
-        <a href="#" class="text-lg">Link</a>
-        <a href="#" class="dropdown text-lg">Dropdown</a>
-        <a href="#" class="text-lg">Sign in</a>
-        <a href="#" class="btn text-lg">Sign up</a>
+        <div class="dropdown text-lg">
+          <button>Links</button>
+          <div class="dropdown-content glass">
+            <a href="https://itsquasiab.github.io/">Website</a>
+            <a href="#">Stuffs</a>
+            <a href="#">Stuffs</a>
+            <a href="#">Stuffs</a>
+            <a href="#">Stuffs</a>
+          </div>
+        </div>
+        <a href="signin.html" class="btn text-lg">Sign in</a>
         <a href="settings.html" class="md:text-lg icon-btn center">
           <img class="settings-icon" alt="Settings">
         </a>
@@ -32,19 +39,19 @@
 
   <div class="max-w-7xl mx-auto px-1 py-1.5">
 
-    <h1 class="text-xl lg:text-3xl xl:text-5xl font-semibold">Settings</h1>
-    <p class="lg:text-xl">Useful stuffs.</p>
+    <h1 class="text-3xl md:text-4xl xl:text-5xl font-semibold">Settings</h1>
+    <p class="md:text-lg">Useful stuffs.</p>
 
-    <div class="my-container p-1 lg:p-1.5 grid gap-0.5">
+    <div class="my-container p-1 md:p-1.5 grid gap-0.5">
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Appearance</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Appearance</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
-          <div class="grid grid-cols-2 gap-1">
+          <div class="grid grid-cols-3 gap-0.5">
             <button id="light-btn">Light mode</button>
             <button id="dark-btn">Dark mode</button>
-            <!--<button id="system-btn">Use system settings</button>-->
+            <button id="system-btn">Use system settings</button>
           </div>
         </div>
       </div>

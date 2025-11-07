@@ -1,25 +1,46 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
+// main.js
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-  const lightBtn = document.getElementById("light-btn");
-  const darkBtn = document.getElementById("dark-btn");
-  //const systemBtn = document.getElementById("system-btn");
-
-  function setTheme(theme) {
+function applyTheme(theme) {
     if (theme === "system") {
-      root.removeAttribute("data-theme");
-      localStorage.removeItem("theme");
+        const systemTheme = prefersDark.matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", systemTheme);
     } else {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
+        document.documentElement.setAttribute("data-theme", theme);
     }
-  }
+}
 
-  const saved = localStorage.getItem("theme");
-  if (saved) root.setAttribute("data-theme", saved);
+// Load theme on every page
+(function initTheme() {
+    const saved = localStorage.getItem("theme") || "system";
+    applyTheme(saved);
+})();
 
-  // Safe to attach now
-  lightBtn.onclick = () => setTheme("light");
-  darkBtn.onclick = () => setTheme("dark");
-  systemBtn.onclick = () => setTheme("system");
+// Listen for system changes if using system theme
+prefersDark.addEventListener("change", () => {
+    if (localStorage.getItem("theme") === "system") {
+        applyTheme("system");
+    }
+});
+
+// Optional: attach to buttons if they exist on this page
+document.addEventListener("DOMContentLoaded", () => {
+    const lightBtn = document.getElementById("light-btn");
+    const darkBtn = document.getElementById("dark-btn");
+    const systemBtn = document.getElementById("system-btn");
+
+    if (lightBtn) lightBtn.addEventListener("click", () => {
+        localStorage.setItem("theme", "light");
+        applyTheme("light");
+    });
+
+    if (darkBtn) darkBtn.addEventListener("click", () => {
+        localStorage.setItem("theme", "dark");
+        applyTheme("dark");
+    });
+
+    if (systemBtn) systemBtn.addEventListener("click", () => {
+        localStorage.setItem("theme", "system");
+        applyTheme("system");
+    });
 });

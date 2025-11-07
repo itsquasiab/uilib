@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>signin</title>
+
+    <link rel="icon" type="icon" href="assets/images/icon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="gradient">
+
+    <header>
+        <div class="navbar-glass"></div>
+        <div class="navbar-glass-edge"></div>
+        <nav class="mx-1 xl:mx-4 flex justify-between">
+            <a href="index.html" class="text-xl">itsquasi</a>
+            <div class="flex gap-0.5">
+                <div class="dropdown text-lg">
+                    <button>Links</button>
+                    <div class="dropdown-content glass">
+                        <a href="https://itsquasiab.github.io/">Website</a>
+                        <a href="#">Stuffs</a>
+                        <a href="#">Stuffs</a>
+                        <a href="#">Stuffs</a>
+                        <a href="#">Stuffs</a>
+                    </div>
+                </div>
+                <a href="signin.html" class="btn text-lg">Sign in</a>
+                <a href="settings.html" class="md:text-lg icon-btn center">
+                    <img class="settings-icon" alt="Settings">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="signin flex items-center justify-center">
+
+        <div class="glass rounded-2xl p-2 md:p-3">
+
+            <h1 class="text-3xl font-semibold text-center">Sign in</h1>
+            <p class="text-center">Just a demo</p>
+            <form action="#" method="post" class="flex flex-col gap-0.5">
+                <label>Email:</label>
+                <input type="email" placeholder="Email" class="input-field" required>
+                <label>Password:</label>
+                <input type="password" placeholder="Password" class="input-field" required>
+                <div class="flex justify-between gap-6">
+                    <a href="#" class="text-sm">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+
+            <p class="text-center text-sm mt-1">
+                Don’t have an account?
+                <a href="#">Sign up</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!--
+  <footer class="p-1 md:p-1.5">
+    <div class="max-w-7xl mx-auto flex justify-between">
+      <div>
+        <p class="text-xl font-semibold">itsquasi's ui library.</p>
+        <p>made by itsquasi.</p>
+      </div>
+    </div>
+  </footer>
+  -->
+
+    <script src="assets/js/main.js">
+    </script>
+
+</body>
+
+</html>

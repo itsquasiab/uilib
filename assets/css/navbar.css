@@ -1,8 +1,18 @@
+/* Navbar */
+:root[data-theme="light"] {
+    --navbar-foreground: hsl(0, 0%, 0%);
+}
+
+:root[data-theme="dark"] {
+    --navbar-foreground: hsl(0, 0%, 100%);
+}
+
 header {
     position: sticky;
     top: 0;
     width: 100%;
     padding: 1rem 0;
+    z-index: 1;
 }
 
 .navbar-glass {
@@ -10,7 +20,7 @@ header {
     inset: 0;
     -webkit-backdrop-filter: blur(var(--blur)) brightness(100%);
     backdrop-filter: blur(var(--blur)) brightness(100%);
-    background: linear-gradient(to bottom, var(--bg), transparent 50%);
+    background: linear-gradient(to bottom, var(--background), transparent 50%);
     pointer-events: none;
 
     height: 200%;
@@ -45,35 +55,36 @@ header {
 nav a,
 nav button {
     background-color: transparent;
-    color: var(--txt);
+    color: var(--navbar-foreground);
     position: relative;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-        background-color 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-        font-weight 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: color var(--transition), background-color var(--transition),
+        transform var(--transition);
     padding: 0.25rem 1rem;
-    border-radius: 50rem;
+    border-radius: 0.5rem;
     box-shadow: none;
 }
 
 nav a:hover,
 nav button:hover {
-    background-color: var(--nav2);
-    transform: scale(1.1);
+    /*background-color: var(--muted);*/
+    color: var(--accent);
+    transform: scale(1.05);
+    filter: brightness(1);
 }
 
 nav a.btn,
 nav button.btn {
-    background-color: var(--acc);
-    color: var(--txt);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     position: relative;
     padding: 0.25rem 1rem;
 }
 
 nav a.btn:hover,
 nav button.btn:hover {
-    font-weight: bold;
-    background-color: var(--acc2);
-    transform: scale(1.1);
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 nav a.icon-btn,
@@ -84,22 +95,27 @@ nav button.icon-btn {
 .center {
     display: flex;
     justify-content: center;
-    /* Centers horizontally */
     align-items: center;
-    /* Centers vertically */
 }
 
 .dropdown {
-    padding: 0.25rem 1rem;
     position: relative;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--muted);
 }
 
 .dropdown:hover .dropdown-content {

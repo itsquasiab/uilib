@@ -19,10 +19,17 @@
     <nav class="mx-1 xl:mx-4 flex justify-between">
       <a href="index.html" class="text-xl">itsquasi</a>
       <div class="flex gap-0.5">
-        <a href="#" class="text-lg">Link</a>
-        <a href="#" class="dropdown text-lg">Dropdown</a>
-        <a href="#" class="text-lg">Sign in</a>
-        <a href="#" class="btn text-lg">Sign up</a>
+        <div class="dropdown text-lg">
+          <button>Links</button>
+          <div class="dropdown-content glass">
+            <a href="https://itsquasiab.github.io/">Website</a>
+            <a href="#">Stuffs</a>
+            <a href="#">Stuffs</a>
+            <a href="#">Stuffs</a>
+            <a href="#">Stuffs</a>
+          </div>
+        </div>
+        <a href="signin.html" class="btn text-lg">Sign in</a>
         <a href="settings.html" class="md:text-lg icon-btn center">
           <img class="settings-icon" alt="Settings">
         </a>
@@ -32,26 +39,27 @@
 
   <div class="max-w-7xl mx-auto px-1 py-1.5">
 
-    <h1 class="text-5xl lg:text-7xl xl:text-9xl"><span class="font-black">itsquasi</span>'s ui library</h1>
-    <p class="lg:text-xl">UI showcase using itsquasi's own CSS and Tailwind CSS</p>
+    <h1 class="text-5xl md:text-7xl xl:text-9xl"><span class="font-black">itsquasi</span>'s ui library</h1>
+    <p class="md:text-xl">UI showcase using itsquasi's own CSS and Tailwind CSS</p>
 
-    <div class="my-container p-1 lg:p-1.5 grid gap-0.5">
+    <div class="my-container p-1 md:p-1.5 grid gap-0.5">
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Header</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Header</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
-          <h1 class="text-xl lg:text-3xl xl:text-5xl font-semibold">Title example</h1>
-          <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Header example</h1>
+          <h1 class="text-3xl md:text-4xl xl:text-5xl font-semibold">Title example</h1>
+          <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Header example</h1>
         </div>
       </div>
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Paragraph</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Paragraph</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
-          <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Lorem ipsum</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis tincidunt porttitor. Cras dictum
+          <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Lorem ipsum</h1>
+          <p><a>Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Cras sagittis tincidunt porttitor. Cras
+            dictum
             ultricies rutrum. Suspendisse convallis viverra lacinia. Fusce arcu ex, fringilla a elementum rhoncus,
             semper ut felis. Vestibulum vulputate pellentesque lectus, ultricies interdum arcu egestas vitae. Sed
             viverra eros sed justo bibendum convallis. Proin pharetra nulla vel sem ultricies ultrices. Praesent non
@@ -69,25 +77,29 @@
         </div>
       </div>
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Link</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Link</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
           <a>Test link</a>
           <br><br>
-          <a class="btn">Button link</a>
+          <a class="button">Button link</a>
         </div>
       </div>
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Button</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Button</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
-          <button>Test button</button>
+          <button>Primary button</button>
+          <br><br>
+          <button class="secondary">Secondary button</button>
+          <br><br>
+          <button class="destructive">Destructive button</button>
         </div>
       </div>
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Input</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Input</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
@@ -98,69 +110,95 @@
           <label>Email:</label><br>
           <input type="email" placeholder="Enter email" /><br>
           <label>Password:</label><br>
-          <input type="password" placeholder="Enter password" />
+          <input type="password" placeholder="Enter password" /><br>
+          <a href="signin.html" class="mt-1">Wanna see the sign in demo?</a>
         </div>
         <div class="preview-container p-0.5 md:p-1">
           <label class="custom-radio">
-            <input type="radio" name="option" />
-            <span></span>
+            <input class="radio" type="radio" name="option" />
+            <span class="radio"></span>
             Option A
+          </label>
+          <br>
+          <label class="custom-radio">
+            <input class="radio" type="radio" name="option" />
+            <span class="radio"></span>
+            Option B
           </label>
         </div>
         <div class="preview-container p-0.5 md:p-1">
           <label class="custom-checkbox">
-            <input type="checkbox" />
-            <span></span>
+            <input class="checkbox" type="checkbox" />
+            <span class="checkbox"></span>
             Remember me
           </label>
+          <br>
+          <label class="custom-checkbox">
+            <input class="checkbox" type="checkbox" />
+            <span class="checkbox"></span>
+            Also remember me
+          </label>
+        </div>
+        <div class="preview-container p-0.5 md:p-1">
+          <select>
+            <option value="">Item 1</option>
+            <option value="">Item 2</option>
+            <option value="">Item 3</option>
+            <option value="">Item 4</option>
+            <option value="">Item 5</option>
+          </select>
         </div>
       </div>
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Card</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Card</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
-        <div class="preview-container p-0.5 md:p-1">
+        <div class="preview-container p-0.5 md:p-1 grid md:grid-cols-2 xl:grid-cols-3 gap-1">
           <div class="my-card p-0.5 md:p-1">
-            <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Card title</h1>
+            <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Card title</h1>
             <p>Some card content.</p>
-            <div class="p-0.5 md:p-1">
-              <hr>
+            <div class="grid grid-cols-2 gap-0.5 mt-1">
+              <button class="secondary">Button</button>
+              <button>Button</button>
             </div>
-            <button>Button</button>
           </div>
         </div>
       </div>
 
-      <h1 class="text-lg lg:text-xl xl:text-2xl font-semibold">Table</h1>
+      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Table</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
           <table>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>City</th>
-            </tr>
-            <tr>
-              <td>Anna</td>
-              <td>23</td>
-              <td>Berlin</td>
-            </tr>
-            <tr>
-              <td>Ben</td>
-              <td>29</td>
-              <td>London</td>
-            </tr>
-            <tr>
-              <td>Carla</td>
-              <td>34</td>
-              <td>Paris</td>
-            </tr>
-            <tr>
-              <td>David</td>
-              <td>41</td>
-              <td>Rome</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anna</td>
+                <td>23</td>
+                <td>Berlin</td>
+              </tr>
+              <tr>
+                <td>Ben</td>
+                <td>29</td>
+                <td>London</td>
+              </tr>
+              <tr>
+                <td>Carla</td>
+                <td>34</td>
+                <td>Paris</td>
+              </tr>
+              <tr>
+                <td>David</td>
+                <td>41</td>
+                <td>Rome</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -180,7 +218,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js">
+  </script>
 
 </body>
 
