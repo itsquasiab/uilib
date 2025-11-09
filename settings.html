@@ -18,15 +18,15 @@
     <div class="navbar-glass-edge"></div>
     <nav class="mx-1 xl:mx-4 flex justify-between">
       <a href="index.html" class="text-xl">itsquasi</a>
-      <div class="flex gap-0.5">
-        <div class="dropdown text-lg">
+      <a href="javascript:void(0);" class="menu-icon" onclick="toggleNav()">
+        <img class="menu-icon" alt="Menu">
+      </a>
+      <div class="flex gap-0.5" id="nav-content">
+        <div class="nav-dropdown text-lg">
           <button>Links</button>
-          <div class="dropdown-content glass">
+          <div class="nav-dropdown-content glass">
             <a href="https://itsquasiab.github.io/">itsquasi's website</a>
-            <a href="#">Stuffs</a>
-            <a href="#">Stuffs</a>
-            <a href="#">Stuffs</a>
-            <a href="#">Stuffs</a>
+            <a href="https://github.com/itsquasiab/uilib">github repo</a>
           </div>
         </div>
         <a href="signin.html" class="btn text-lg">Sign in</a>
@@ -42,9 +42,9 @@
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-semibold">Settings</h1>
     <p class="md:text-lg">Useful stuffs.</p>
 
-    <div class="my-container p-1 md:p-1.5 grid gap-0.5">
+    <div class="my-container p-1 md:p-1.5 grid gap-0.5 mt-1">
 
-      <h1 class="text-lg md:text-xl xl:text-2xl font-semibold">Appearance</h1>
+      <h1 class="text-xl md:text-2xl font-semibold">Appearance</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">

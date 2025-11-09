@@ -5,13 +5,10 @@
 @import url(checkbox_radio.css);
 
 :root {
-    --blur: .5rem;
-    --blur-e: .25rem;
+    --blur: blur(0.5rem);
+    --blur-e: blur(0.25rem);
     --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     --transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-
-    --glass: hsla(0, 0%, 100%, 10%);
-    --glass-border: hsla(0, 0%, 100%, 20%);
 }
 
 /* Light Mode */
@@ -34,10 +31,8 @@
     --ring: hsl(220 90% 64%);
 
     --gradient: linear-gradient(hsl(220, 100%, 98%) 0%, hsl(220, 100%, 86%) 100%);
-}
-
-:root[data-theme="light"] .settings-icon {
-    content: url("../icons/settings_light.svg");
+    --glass: hsla(0, 0%, 100%, 10%);
+    --glass-border: hsla(0, 0%, 100%, 20%);
 }
 
 /* Dark Mode */
@@ -60,10 +55,8 @@
     --ring: hsl(220 90% 64%);
 
     --gradient: linear-gradient(hsl(240, 50%, 12%) 0%, hsl(240, 30%, 24%) 100%);
-}
-
-:root[data-theme="dark"] .settings-icon {
-    content: url("../icons/settings_dark.svg");
+    --glass: hsla(0, 0%, 0%, 10%);
+    --glass-border: hsla(0, 0%, 50%, 20%);
 }
 
 body {
@@ -79,8 +72,8 @@ body {
 .glass {
     background-color: var(--glass);
     border: 1px solid var(--glass-border);
-    -webkit-backdrop-filter: blur(var(--blur));
-    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
     box-shadow: var(--box-shadow);
 }
 
@@ -172,6 +165,43 @@ button:hover {
 
 button:active {
     transform: scale(0.95);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.dropdown-content a {
+    display: block;
+    color: var(--foreground);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color var(--transition), color var(--transition),
+        transform var(--transition);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.dropdown-content a:active {
+    transform: scale(0.95);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 input,

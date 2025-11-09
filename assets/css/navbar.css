@@ -3,8 +3,24 @@
     --navbar-foreground: hsl(0, 0%, 0%);
 }
 
+:root[data-theme="light"] .settings-icon {
+    content: url("../icons/settings_light.svg");
+}
+
+:root[data-theme="light"] .menu-icon {
+    content: url("../icons/menu_light.svg");
+}
+
 :root[data-theme="dark"] {
     --navbar-foreground: hsl(0, 0%, 100%);
+}
+
+:root[data-theme="dark"] .settings-icon {
+    content: url("../icons/settings_dark.svg");
+}
+
+:root[data-theme="dark"] .menu-icon {
+    content: url("../icons/menu_dark.svg");
 }
 
 header {
@@ -18,8 +34,8 @@ header {
 .navbar-glass {
     position: absolute;
     inset: 0;
-    -webkit-backdrop-filter: blur(var(--blur)) brightness(100%);
-    backdrop-filter: blur(var(--blur)) brightness(100%);
+    -webkit-backdrop-filter: var(--blur) brightness(100%);
+    backdrop-filter: var(--blur) brightness(100%);
     background: linear-gradient(to bottom, var(--background), transparent 50%);
     pointer-events: none;
 
@@ -34,9 +50,8 @@ header {
 
 .navbar-glass-edge {
     position: absolute;
-    height: 4px;
-    -webkit-backdrop-filter: blur(var(--blur-e)) brightness(100%);
-    backdrop-filter: blur(var(--blur-e)) brightness(100%);
+    -webkit-backdrop-filter: var(--blur-e) brightness(100%);
+    backdrop-filter: var(--blur-e) brightness(100%);
     transform: translateY(100%);
     pointer-events: none;
 
@@ -58,7 +73,7 @@ nav button {
     color: var(--navbar-foreground);
     position: relative;
     transition: color var(--transition), background-color var(--transition),
-        transform var(--transition);
+        transform var(--transition), filter var(--transition);
     padding: 0.25rem 1rem;
     border-radius: 0.5rem;
     box-shadow: none;
@@ -83,7 +98,6 @@ nav button.btn {
 nav a.btn:hover,
 nav button.btn:hover {
     filter: brightness(1.2);
-    transform: translateY(-2px);
     transform: scale(1.05);
 }
 
@@ -92,32 +106,130 @@ nav button.icon-btn {
     padding: 0.25rem calc(0.25rem + 2px);
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.dropdown {
+nav .nav-dropdown {
     position: relative;
 }
 
-.dropdown-content {
+nav .nav-dropdown-content {
     display: none;
     position: absolute;
+    z-index: 2;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    box-shadow: var(--box-shadow);
 }
 
-.dropdown-content a {
+nav .nav-dropdown-content a {
     display: block;
 }
 
-.dropdown-content a:hover {
+nav .nav-dropdown-content a:hover {
     background-color: var(--muted);
 }
 
-.dropdown:hover .dropdown-content {
+nav .nav-dropdown:hover .nav-dropdown-content {
     display: block;
+}
+
+/* open by click for mobile */
+@media (max-width: 767px) {
+    #nav-content {
+        background-color: var(--glass);
+        border: 1px solid var(--glass-border);
+        -webkit-backdrop-filter: var(--blur);
+        backdrop-filter: var(--blur);
+        box-shadow: var(--box-shadow);
+
+        flex-direction: column;
+        padding: 0.5rem;
+        position: absolute;
+        top: 70px;
+        left: 1rem;
+        border-radius: 0.5rem;
+        width: calc(100% - 2rem);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transform var(--transition),
+            backdrop-filter var(--transition);
+    }
+
+    #nav-content.responsive {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    #nav-content a,
+    #nav-content button {
+        padding: 0.5rem 1rem;
+    }
+
+    #nav-content a:hover,
+    #nav-content button:hover,
+    .nav-dropdown>button:hover {
+        transform: scale(1);
+        background-color: var(--muted);
+        color: var(--navbar-foreground);
+    }
+
+    #nav-content a.btn:hover,
+    #nav-content button.btn:hover {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+        filter: brightness(1.2);
+    }
+
+    /* dropdown stays closed until JS toggles it */
+    nav .nav-dropdown-content {
+        width: 100%;
+        padding: 0.5rem;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transform var(--transition);
+    }
+
+    /* JS will add .open class */
+    nav .nav-dropdown.open .nav-dropdown-content {
+        position: static;
+        display: block;
+        pointer-events: auto;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    nav .nav-dropdown>button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
