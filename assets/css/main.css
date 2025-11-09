@@ -158,6 +158,10 @@ button {
     color: var(--destructive-foreground);
 }
 
+.search-button {
+    padding: 0.25rem 0.75rem;
+}
+
 button:hover {
     filter: brightness(1.2);
     transform: scale(1.05);

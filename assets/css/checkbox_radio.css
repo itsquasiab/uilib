@@ -2,8 +2,7 @@
 .custom-radio {
     display: block;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
+    padding-left: 2.25rem;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -37,6 +36,10 @@
 /* On mouse-over, add a grey background color */
 .custom-checkbox:hover input~.checkbox {
     transform: scale(1.05);
+}
+
+.custom-checkbox:active input~.checkbox {
+    transform: scale(0.95);
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -87,6 +90,10 @@
 /* On mouse-over, add a grey background color */
 .custom-radio:hover input~.radio {
     transform: scale(1.05);
+}
+
+.custom-radio:active input~.radio {
+    transform: scale(0.95);
 }
 
 /* When the radio button is checked, add a blue background */

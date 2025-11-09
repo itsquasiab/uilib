@@ -118,12 +118,13 @@
         </div>
       </div>
 
-      <h1 class="text-xl md:text-2xl font-semibold">Input</h1>
+      <h1 class="text-xl md:text-2xl font-semibold">Search and input box</h1>
 
       <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
           <label>Search:</label><br>
-          <input type="text" placeholder="Search" />
+            <input type="text" id="search" name="q" placeholder="Search"/>
+            <button type="submit" class="search-button">Search</button>
         </div>
         <div class="preview-container p-0.5 md:p-1">
           <label>Email:</label><br>
@@ -131,6 +132,24 @@
           <label>Password:</label><br>
           <input type="password" placeholder="Enter password" /><br>
           <a href="signin.html" class="mt-1">Wanna see the sign in demo?</a>
+        </div>
+      </div>
+
+      <h1 class="text-xl md:text-2xl font-semibold">Checkbox and radio</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
+        <div class="preview-container p-0.5 md:p-1">
+          <label class="custom-checkbox">
+            <input class="checkbox" type="checkbox" />
+            <span class="checkbox"></span>
+            Remember me
+          </label>
+          <br>
+          <label class="custom-checkbox">
+            <input class="checkbox" type="checkbox" />
+            <span class="checkbox"></span>
+            Also remember me
+          </label>
         </div>
         <div class="preview-container p-0.5 md:p-1">
           <label class="custom-radio">
@@ -145,19 +164,11 @@
             Option B
           </label>
         </div>
-        <div class="preview-container p-0.5 md:p-1">
-          <label class="custom-checkbox">
-            <input class="checkbox" type="checkbox" />
-            <span class="checkbox"></span>
-            Remember me
-          </label>
-          <br>
-          <label class="custom-checkbox">
-            <input class="checkbox" type="checkbox" />
-            <span class="checkbox"></span>
-            Also remember me
-          </label>
-        </div>
+      </div>
+
+      <h1 class="text-xl md:text-2xl font-semibold">Form select</h1>
+
+      <div class="my-preview p-0.25 grid gap-0.25">
         <div class="preview-container p-0.5 md:p-1">
           <select>
             <option value="">Item 1</option>
