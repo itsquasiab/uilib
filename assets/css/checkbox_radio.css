@@ -46,7 +46,7 @@
 .custom-checkbox input:checked~.checkbox {
     background-color: var(--primary);
     border-color: var(--ring);
-    box-shadow: 0 0 1px 1px var(--ring);
+    box-shadow: 0 0 0px 2px var(--ring);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -100,7 +100,7 @@
 .custom-radio input:checked~.radio {
     background-color: var(--primary);
     border-color: var(--ring);
-    box-shadow: 0 0 1px 1px var(--ring);
+    box-shadow: 0 0 0px 2px var(--ring);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
