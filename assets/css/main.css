@@ -1,68 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url(color.css);
 @import url(navbar.css);
 @import url(table.css);
 @import url(checkbox_radio.css);
 
-:root {
-    --blur: blur(0.5rem);
-    --blur-e: blur(0.25rem);
-    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    --transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/* Light Mode */
-:root[data-theme="light"] {
-    color-scheme: light;
-    --background: hsl(220, 100%, 98%);
-    --foreground: hsl(240, 50%, 24%);
-    --card: hsl(0, 0%, 100%);
-    --primary: hsl(210, 100%, 50%);
-    --primary-foreground: hsl(0, 0%, 100%);
-    --secondary: hsl(0, 0%, 100%);
-    --secondary-foreground: hsl(240, 50%, 24%);
-    --muted: hsl(220, 100%, 92%);
-    --muted-foreground: hsl(210, 100%, 50%);
-    --accent: hsl(210, 100%, 40%);
-    --destructive: hsl(0 80% 60%);
-    --destructive-foreground: hsl(0, 0%, 100%);
-    --border: hsl(220, 100%, 86%);
-    --input: hsl(0, 0%, 100%);
-    --ring: hsla(220, 90%, 64%, 50%);
-
-    --gradient: linear-gradient(hsl(220, 100%, 98%) 0%, hsl(220, 100%, 86%) 100%);
-    --glass: hsla(0, 0%, 100%, 20%);
-    --glass-border: hsla(0, 0%, 100%, 40%);
-}
-
-/* Dark Mode */
-:root[data-theme="dark"] {
-    color-scheme: dark;
-    --background: hsl(240, 50%, 12%);
-    --foreground: hsl(220, 100%, 94%);
-    --card: hsl(240, 50%, 14%);
-    --primary: hsl(210, 100%, 50%);
-    --primary-foreground: hsl(0, 0%, 100%);
-    --secondary: hsl(240, 50%, 18%);
-    --secondary-foreground: hsl(220, 100%, 94%);
-    --muted: hsl(240, 40%, 18%);
-    --muted-foreground: hsl(210, 100%, 50%);
-    --accent: hsl(210, 100%, 60%);
-    --destructive: hsl(0 80% 60%);
-    --destructive-foreground: hsl(0, 0%, 100%);
-    --border: hsl(240, 30%, 24%);
-    --input: hsl(240, 50%, 18%);
-    --ring: hsla(220, 90%, 64%, 50%);
-
-    --gradient: linear-gradient(hsl(240, 50%, 12%) 0%, hsl(240, 30%, 24%) 100%);
-    --glass: hsla(0, 0%, 0%, 20%);
-    --glass-border: hsla(0, 0%, 30%, 40%);
-}
-
 body {
-    font-family: 'Space Grotesk';
+    font-family: 'Inter';
     background-color: var(--background);
     color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Space Grotesk';
 }
 
 .gradient {
@@ -83,7 +34,7 @@ body {
 
 .my-container {
     background-color: var(--background);
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     border-radius: 1rem;
 }
 
@@ -119,23 +70,21 @@ a {
     text-align: center;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: color var(--transition), filter var(--transition), transform var(--transition);
+    transition: color var(--transition), filter var(--transition);
     box-shadow: var(--box-shadow);
 }
 
 a:hover {
-    filter: brightness(1.2);
-    transform: translateY(-2px);
+    text-decoration: underline;
 }
 
 .button:hover {
     filter: brightness(1.2);
-    transform: scale(1.05);
+    text-decoration: none;
 }
 
-a:active,
 .button:active {
-    transform: scale(0.95);
+    filter: brightness(1);
 }
 
 button {
@@ -143,7 +92,7 @@ button {
     color: var(--primary-foreground);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: color var(--transition), filter var(--transition), transform var(--transition);
+    transition: color var(--transition), filter var(--transition);
     box-shadow: var(--box-shadow);
 }
 
@@ -164,11 +113,10 @@ button {
 
 button:hover {
     filter: brightness(1.2);
-    transform: scale(1.05);
 }
 
 button:active {
-    transform: scale(0.95);
+    filter: brightness(1);
 }
 
 .dropdown {
@@ -226,6 +174,6 @@ select:focus {
 }
 
 footer {
-    background-color: var(--secondary);
+    background-color: var(--background);
     border-top: 1px solid var(--border);
 }

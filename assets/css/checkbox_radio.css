@@ -29,20 +29,18 @@
     border-radius: 0.5rem;
     background-color: var(--input);
     border: 1px solid var(--border);
-    transition: background-color var(--transition), transform var(--transition),
+    transition: background-color var(--transition),
         border var(--transition), box-shadow var(--transition);
 }
 
-/* On mouse-over, add a grey background color */
-.custom-checkbox:hover input~.checkbox {
+/*.custom-checkbox:hover input~.checkbox {
     transform: scale(1.05);
 }
 
 .custom-checkbox:active input~.checkbox {
     transform: scale(0.95);
-}
+}*/
 
-/* When the checkbox is checked, add a blue background */
 .custom-checkbox input:checked~.checkbox {
     background-color: var(--primary);
     border-color: var(--ring);
@@ -83,20 +81,18 @@
     background-color: var(--input);
     border: 1px solid var(--border);
     border-radius: 50%;
-    transition: background-color var(--transition), transform var(--transition),
+    transition: background-color var(--transition),
         border var(--transition), box-shadow var(--transition);
 }
 
-/* On mouse-over, add a grey background color */
-.custom-radio:hover input~.radio {
+/*.custom-radio:hover input~.radio {
     transform: scale(1.05);
 }
 
 .custom-radio:active input~.radio {
     transform: scale(0.95);
-}
+}*/
 
-/* When the radio button is checked, add a blue background */
 .custom-radio input:checked~.radio {
     background-color: var(--primary);
     border-color: var(--ring);

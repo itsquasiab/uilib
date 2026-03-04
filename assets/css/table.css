@@ -1,13 +1,4 @@
 /* Table */
-:root[data-theme="light"]{
-    --table: hsl(0, 0%, 100%);
-    --table-secondary: hsl(220, 100%, 98%);
-}
-
-:root[data-theme="dark"]{
-    --table: hsl(240, 50%, 12%);
-    --table-secondary: hsl(240, 50%, 14%);
-}
 
 table {
   border-collapse: separate;

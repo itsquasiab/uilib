@@ -72,8 +72,7 @@ nav button {
     background-color: transparent;
     color: var(--navbar-foreground);
     position: relative;
-    transition: color var(--transition), background-color var(--transition),
-        transform var(--transition), filter var(--transition);
+    transition: color var(--transition), background-color var(--transition), filter var(--transition);
     padding: 0.25rem 1rem;
     border-radius: 0.5rem;
     box-shadow: none;
@@ -83,8 +82,8 @@ nav a:hover,
 nav button:hover {
     /*background-color: var(--muted);*/
     color: var(--accent);
-    transform: scale(1.05);
     filter: brightness(1);
+    text-decoration: none;
 }
 
 nav a.btn,
@@ -98,7 +97,6 @@ nav button.btn {
 nav a.btn:hover,
 nav button.btn:hover {
     filter: brightness(1.2);
-    transform: scale(1.05);
 }
 
 nav a.icon-btn,
