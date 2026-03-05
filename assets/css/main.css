@@ -56,58 +56,57 @@ h1, h2, h3, h4, h5, h6, .logo {
     border-radius: 0.75rem;
 }
 
-a {
+a.generic {
     color: var(--accent);
     text-decoration: none;
-    display: inline-block;
-    transition: transform var(--transition),
-        color var(--transition), filter var(--transition);
 }
 
-.button {
+a.button {
     background-color: var(--primary);
     color: var(--primary-foreground);
-    text-align: center;
+    display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: color var(--transition), filter var(--transition);
     box-shadow: var(--box-shadow);
 }
 
-a:hover {
+a.generic:hover {
     text-decoration: underline;
 }
 
-.button:hover {
+a.button:hover {
     filter: brightness(1.2);
     text-decoration: none;
 }
 
-.button:active {
+a.button:active {
     filter: brightness(1);
 }
 
 button {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: color var(--transition), filter var(--transition);
-    box-shadow: var(--box-shadow);
 }
 
-.secondary {
+button.primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+button.secondary {
     background-color: var(--secondary);
     color: var(--secondary-foreground);
     border: 1px solid var(--border);
 }
 
-.destructive {
+button.destructive {
     background-color: var(--destructive);
     color: var(--destructive-foreground);
 }
 
-.search-button {
+button.search {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     padding: 0.25rem 0.75rem;
 }
 
@@ -128,7 +127,7 @@ button:active {
     display: none;
     position: absolute;
     z-index: 2;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 0.5rem;
 }
 
@@ -137,19 +136,12 @@ button:active {
     color: var(--foreground);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: background-color var(--transition), color var(--transition),
-        transform var(--transition);
 }
 
 .dropdown-content a:hover {
     background-color: var(--muted);
     color: var(--muted-foreground);
-    transform: scale(1.05);
     filter: brightness(1);
-}
-
-.dropdown-content a:active {
-    transform: scale(0.95);
 }
 
 .dropdown:hover .dropdown-content {
@@ -174,6 +166,7 @@ select:focus {
 }
 
 footer {
+    font-family: 'Space Grotesk';
     background-color: var(--background);
     border-top: 1px solid var(--border);
 }

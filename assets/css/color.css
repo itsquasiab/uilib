@@ -8,16 +8,16 @@
 /* Light Mode */
 :root[data-theme="light"] {
     color-scheme: light;
-    --background: hsl(220, 100%, 96%);
-    --foreground: hsl(240, 50%, 10%);
-    --card: hsl(0, 0%, 100%);
+    --background: hsl(200, 100%, 96%);
+    --foreground: hsl(200, 50%, 10%);
+    --card: hsl(200, 100%, 98%);
     --primary: hsl(200, 100%, 50%);
     --primary-foreground: hsl(0, 0%, 100%);
     --secondary: hsl(0, 0%, 100%);
-    --secondary-foreground: hsl(240, 50%, 24%);
-    --muted: hsl(220, 100%, 92%);
+    --secondary-foreground: hsl(200, 50%, 24%);
+    --muted: hsl(200, 100%, 92%);
     --muted-foreground: hsl(200, 100%, 50%);
-    --accent: hsl(200, 100%, 40%);
+    --accent: hsl(200, 100%, 30%);
     --destructive: hsl(0 80% 60%);
     --destructive-foreground: hsl(0, 0%, 100%);
     --border: hsl(200, 100%, 86%);
@@ -26,6 +26,8 @@
 
     --table: hsl(0, 0%, 100%);
     --table-secondary: hsl(200, 100%, 98%);
+
+    --navbar-foreground: hsl(0, 0%, 0%);
 
     --gradient: linear-gradient(hsl(200, 100%, 98%) 0%, hsl(200, 100%, 86%) 100%);
     --glass: hsla(0, 0%, 100%, 20%);
@@ -36,15 +38,15 @@
 :root[data-theme="dark"] {
     color-scheme: dark;
     --background: hsl(200, 50%, 10%);
-    --foreground: hsl(220, 100%, 96%);
+    --foreground: hsl(200, 100%, 96%);
     --card: hsl(200, 50%, 14%);
     --primary: hsl(200, 100%, 50%);
     --primary-foreground: hsl(0, 0%, 100%);
     --secondary: hsl(200, 50%, 18%);
-    --secondary-foreground: hsl(220, 100%, 94%);
+    --secondary-foreground: hsl(200, 100%, 94%);
     --muted: hsl(200, 40%, 18%);
     --muted-foreground: hsl(200, 100%, 50%);
-    --accent: hsl(200, 100%, 60%);
+    --accent: hsl(200, 100%, 70%);
     --destructive: hsl(0 80% 60%);
     --destructive-foreground: hsl(0, 0%, 100%);
     --border: hsl(200, 30%, 24%);
@@ -53,6 +55,8 @@
 
     --table: hsl(200, 50%, 12%);
     --table-secondary: hsl(200, 50%, 14%);
+
+    --navbar-foreground: hsl(0, 0%, 100%);
 
     --gradient: linear-gradient(hsl(200, 50%, 12%) 0%, hsl(200, 30%, 24%) 100%);
     --glass: hsla(0, 0%, 0%, 20%);
