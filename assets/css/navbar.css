@@ -1,20 +1,4 @@
 /* Navbar */
-:root[data-theme="light"] .settings-icon {
-    content: url("../icons/settings_light.svg");
-}
-
-:root[data-theme="light"] .menu-icon {
-    content: url("../icons/menu_light.svg");
-}
-
-:root[data-theme="dark"] .settings-icon {
-    content: url("../icons/settings_dark.svg");
-}
-
-:root[data-theme="dark"] .menu-icon {
-    content: url("../icons/menu_dark.svg");
-}
-
 header {
     position: sticky;
     top: 0;
@@ -60,7 +44,6 @@ header {
 }
 
 a.nav {
-    color: var(--navbar-foreground);
     position: relative;
     padding: 0.25rem 0;
 }

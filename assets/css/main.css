@@ -17,6 +17,12 @@ h1, h2, h3, h4, h5, h6, .logo {
     font-family: 'Space Grotesk';
 }
 
+.icons {
+    color: var(--foreground);
+    height: 24px;
+    width: 24px;
+}
+
 .gradient {
     background-image: var(--gradient);
 }

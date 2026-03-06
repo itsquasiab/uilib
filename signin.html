@@ -19,8 +19,11 @@
         <nav class="max-w-7xl mx-auto">
             <div class="flex justify-between px-1">
                 <a href="index.html" class="nav logo">itsquasi</a>
-                <a href="javascript:void(0);" class="nav-icon menu" onclick="toggleNav()"><img class="menu-icon"
-                        alt="Menu"></a>
+                <a href="javascript:void(0);" class="nav-icon menu" onclick="toggleNav()">
+                    <svg class="icon">
+                        <use href="assets/icons/icons.svg#menu"></use>
+                    </svg>
+                </a>
                 <div class="flex gap-0.5" id="nav-content">
 
                     <div class="nav-dropdown">
@@ -33,7 +36,9 @@
 
                     <a href="signin.html" class="nav-button">Sign in</a>
                     <a href="settings.html" class="nav-icon center">
-                        <img class="settings-icon" alt="Settings">
+                        <svg class="icon">
+                            <use href="assets/icons/icons.svg#settings"></use>
+                        </svg>
                     </a>
                 </div>
             </div>
