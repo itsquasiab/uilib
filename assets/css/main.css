@@ -13,12 +13,17 @@ body {
     color: var(--foreground);
 }
 
-h1, h2, h3, h4, h5, h6, .logo {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
     font-family: 'Space Grotesk';
 }
 
-.icons {
-    color: var(--foreground);
+.icon {
     height: 24px;
     width: 24px;
 }
@@ -114,7 +119,8 @@ button.destructive {
 button.search {
     background-color: var(--primary);
     color: var(--primary-foreground);
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.25rem;
+    line-height: 1;
 }
 
 button:hover {
@@ -123,6 +129,11 @@ button:hover {
 
 button:active {
     filter: brightness(1);
+}
+
+.search-row {
+    display: flex;
+    gap: 0.25rem;
 }
 
 .dropdown {
