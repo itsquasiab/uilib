@@ -24,6 +24,7 @@ h6,
 }
 
 .icon {
+    color: var(--foreground);
     height: 24px;
     width: 24px;
 }
@@ -174,7 +175,6 @@ select {
     box-shadow: var(--box-shadow);
     padding: 0.25rem 0.75rem;
     outline: none;
-    transition: border var(--transition), box-shadow var(--transition);
 }
 
 input:focus,

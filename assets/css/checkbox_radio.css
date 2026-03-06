@@ -29,8 +29,6 @@
     border-radius: 0.5rem;
     background-color: var(--input);
     border: 1px solid var(--border);
-    transition: background-color var(--transition),
-        border var(--transition), box-shadow var(--transition);
 }
 
 /*.custom-checkbox:hover input~.checkbox {
@@ -43,8 +41,6 @@
 
 .custom-checkbox input:checked~.checkbox {
     background-color: var(--primary);
-    border-color: var(--ring);
-    box-shadow: 0 0 0px 2px var(--ring);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -52,7 +48,6 @@
     content: "";
     position: absolute;
     display: none;
-    transition: display var(--transition);
 }
 
 /* Show the checkmark when checked */
@@ -81,8 +76,6 @@
     background-color: var(--input);
     border: 1px solid var(--border);
     border-radius: 50%;
-    transition: background-color var(--transition),
-        border var(--transition), box-shadow var(--transition);
 }
 
 /*.custom-radio:hover input~.radio {
@@ -95,8 +88,6 @@
 
 .custom-radio input:checked~.radio {
     background-color: var(--primary);
-    border-color: var(--ring);
-    box-shadow: 0 0 0px 2px var(--ring);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -104,7 +95,6 @@
     content: "";
     position: absolute;
     display: none;
-    transition: display var(--transition);
 }
 
 /* Show the indicator (dot/circle) when checked */

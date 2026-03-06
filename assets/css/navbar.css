@@ -76,6 +76,7 @@ button.nav-dropdown-button {
 .menu {
     display: none;
     cursor: pointer;
+    
 }
 
 .center {
@@ -194,6 +195,8 @@ button.nav-dropdown-button {
     }
 
     .menu {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
